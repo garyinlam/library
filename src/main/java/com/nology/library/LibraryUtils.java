@@ -1,4 +1,4 @@
-package org.nology;
+package com.nology.library;
 
 public class LibraryUtils {
 }
