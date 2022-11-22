@@ -107,4 +107,19 @@ public class Book {
     public void setCurrentLoaner(User currentLoaner) {
         this.currentLoaner = currentLoaner;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title=" + title +
+                ", author=" + author +
+                ", genre=" + genre +
+                ", subGenre=" + subGenre +
+                ", publisher=" + publisher +
+                ", timesLoaned=" + timesLoaned +
+                ", isLoaned=" + isLoaned +
+                ", currentLoaner=" + currentLoaner +
+                '}';
+    }
 }
