@@ -12,6 +12,9 @@ public class Book {
     private boolean isLoaned;
     private User currentLoaner;
 
+    public Book() {
+    }
+
     public Book(int id, String title, String author, String genre, String subGenre, String publisher) {
         this.id = id;
         this.title = title;

@@ -1,6 +1,7 @@
 package com.nology.library;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -36,6 +37,10 @@ public class LibraryUtils {
 
     public static Book jsonToBook(String s) throws JsonProcessingException {
         return objectMapper.readValue(s,Book.class);
+    }
+
+    public static List<Book> jsonToBookList (File file) throws IOException {
+        return objectMapper.readValue(file, new TypeReference<List<Book>>(){});
     }
 
     public static void toJson(Object o, String file) throws IOException {

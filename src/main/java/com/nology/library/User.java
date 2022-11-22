@@ -5,6 +5,9 @@ public class User {
     private String name;
     private boolean isAdmin;
 
+    public User() {
+    }
+
     public User(int id, String name) {
         this.id = id;
         this.name = name;
