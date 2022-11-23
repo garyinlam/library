@@ -144,7 +144,7 @@ public class Book {
     }
     @Override
     public String toString() {
-        return title + ": " + author + " ("+ publisher+ ") " + genre + ", " + subGenre + " ID = " + id;
+        return title + ": " + author + " ("+ publisher+ ") | " + genre + ", " + subGenre + " | ID = " + id;
     }
 
 

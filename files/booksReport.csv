@@ -92,7 +92,7 @@ Number,Title,Author,Genre,SubGenre,Publisher,TimesLoaned,IsOnLoan,CurrentLoanerI
 91,Free Will,"Harris, Sam",nonfiction,psychology,FreePress,0,false,null
 92,Bookless in Baghdad,"Tharoor, Shashi",nonfiction,history,Penguin,0,false,null
 93,"Case of the Lame Canary, The","Gardner, Earle Stanley",fiction,novel,Penguin,0,false,null
-94,"Theory of Everything, The","Hawking, Stephen",science,physics,Jaico,1,true,0
+94,"Theory of Everything, The","Hawking, Stephen",science,physics,Jaico,1,false,null
 95,New Markets & Other Essays,"Drucker, Peter",science,economics,Penguin,0,false,null
 96,Electric Universe,"Bodanis, David",science,physics,Penguin,0,false,null
 97,"Hunchback of Notre Dame, The","Hugo, Victor",fiction,classic,Random House,0,false,null
