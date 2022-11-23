@@ -15,6 +15,9 @@ On shut down JSON files are created that are used if they exist when the program
 
 - Java
 
+## Initial basic class diagram
+
+![ClassDiagram](/files/ClassDiagram.png)
 
 ## Commands
 ### help
