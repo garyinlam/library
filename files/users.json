@@ -1,0 +1,9 @@
+[ {
+  "id" : 0,
+  "name" : "G",
+  "admin" : true
+}, {
+  "id" : 1,
+  "name" : "non",
+  "admin" : false
+} ]

@@ -1,0 +1,3 @@
+Number,Title,Author,Genre,SubGenre,Publisher,TimesLoaned,IsOnLoan,CurrentLoanerID
+3,God Created the Integers,"Hawking, Stephen",tech,mathematics,Penguin,1,true,1
+94,"Theory of Everything, The","Hawking, Stephen",science,physics,Jaico,1,true,0

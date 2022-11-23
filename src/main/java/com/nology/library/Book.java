@@ -111,18 +111,41 @@ public class Book {
         this.currentLoaner = currentLoaner;
     }
 
+    public void loan(User loaner){
+        isLoaned = true;
+        currentLoaner = loaner;
+        timesLoaned++;
+    }
+
+    public void returnBook(){
+        isLoaned = false;
+        currentLoaner = null;
+    }
+
+    public String toCSV(){
+        String retVal = ""+id;
+        if (title.contains(",")){
+            retVal+= ",\""+title+"\"";
+        } else {
+            retVal+= ","+title;
+        }
+        if (author.contains(",")){
+            retVal+= ",\""+author+"\"";
+        }else {
+            retVal+= ","+author;
+        }
+        retVal += ","+genre+","+subGenre+","+publisher+","+timesLoaned+","+isLoaned+",";
+        if (currentLoaner == null) {
+            retVal += "null";
+        } else {
+            retVal += currentLoaner.getId();
+        }
+        return retVal;
+    }
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title=" + title +
-                ", author=" + author +
-                ", genre=" + genre +
-                ", subGenre=" + subGenre +
-                ", publisher=" + publisher +
-                ", timesLoaned=" + timesLoaned +
-                ", isLoaned=" + isLoaned +
-                ", currentLoaner=" + currentLoaner +
-                '}';
+        return title + ": " + author + " ("+ publisher+ ") " + genre + ", " + subGenre + " ID = " + id;
     }
+
+
 }

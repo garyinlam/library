@@ -22,6 +22,8 @@ public class LibraryUtils {
         while ((line = br.readLine()) != null){
             retVal.add(line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1));
         }
+        fr.close();
+        br.close();
         return retVal;
     }
 
@@ -43,7 +45,20 @@ public class LibraryUtils {
         return objectMapper.readValue(file, new TypeReference<List<Book>>(){});
     }
 
+    public static List<User> jsonToUserList (File file) throws IOException {
+        return objectMapper.readValue(file, new TypeReference<List<User>>(){});
+    }
+
     public static void toJson(Object o, String file) throws IOException {
         objectMapper.writeValue(new File(file), o);
+    }
+
+    public static void bookListCSV(List<Book> books,String fileName) throws IOException {
+        FileWriter fw = new FileWriter(fileName);
+        fw.write("Number,Title,Author,Genre,SubGenre,Publisher,TimesLoaned,IsOnLoan,CurrentLoanerID\n");
+        for (Book b : books) {
+            fw.write(b.toCSV()+"\n");
+        }
+        fw.close();
     }
 }

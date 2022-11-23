@@ -20,7 +20,7 @@ public class Input {
         while (!correctInput){
             correctInput = input.matches("y") || input.matches("n");
             if (!correctInput){
-                System.out.println("Only input y or n");
+                Output.error("Only input y or n");
                 try {
                     input = br.readLine().toLowerCase();
                 } catch (IOException e) {
@@ -42,7 +42,7 @@ public class Input {
         while (!correctInput) {
             correctInput = Arrays.asList(inputs).contains(input);
             if (!correctInput){
-                System.out.println("Invalid input, type 'help' for commands");
+                Output.error("Invalid input, type 'help' for commands");
                 try {
                     input = br.readLine().toLowerCase();
                 } catch (IOException e) {
@@ -51,6 +51,14 @@ public class Input {
             }
         }
         return input;
+    }
+
+    public static String getInput(){
+        try {
+            return br.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static int getInt(){
@@ -69,7 +77,7 @@ public class Input {
                 retVal = Integer.parseInt(input);
 
                 if(retVal < 0){
-                    System.err.println("Please enter in an valid number");
+                    Output.error("Please enter in an valid number");
                     input = br.readLine();
                 } else {
                     validInput = true;

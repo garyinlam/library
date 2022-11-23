@@ -25,9 +25,13 @@
   "genre" : "tech",
   "subGenre" : "mathematics",
   "publisher" : "Penguin",
-  "timesLoaned" : 0,
-  "currentLoaner" : null,
-  "loaned" : false
+  "timesLoaned" : 1,
+  "currentLoaner" : {
+    "id" : 1,
+    "name" : "non",
+    "admin" : false
+  },
+  "loaned" : true
 }, {
   "id" : 4,
   "title" : "Superfreakonomics",
@@ -935,7 +939,7 @@
   "genre" : "science",
   "subGenre" : "physics",
   "publisher" : "Jaico",
-  "timesLoaned" : 0,
+  "timesLoaned" : 1,
   "currentLoaner" : null,
   "loaned" : false
 }, {
