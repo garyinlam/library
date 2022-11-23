@@ -5,7 +5,10 @@ public class User {
     private String name;
     private boolean isAdmin;
 
+    private static int idCounter = 0;
+
     public User() {
+        this.id = idCounter++;
     }
 
     public User(int id, String name) {
@@ -32,6 +35,10 @@ public class User {
         return name;
     }
 
+    public static int getIdCounter() {
+        return idCounter;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -42,5 +49,9 @@ public class User {
 
     public void setAdmin(boolean admin) {
         isAdmin = admin;
+    }
+
+    public static void setIdCounter(int idCounter) {
+        User.idCounter = idCounter;
     }
 }
