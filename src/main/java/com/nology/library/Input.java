@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Input {
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    private static String[] inputs = {"login","logout","create","loans","books","report","help","loan","return","quit"};
+    private static String[] inputs = {"login","logout","create","loans","books","report","help","loan","return","quit","search","author"};
 
     public static boolean confirm() {
         String input = null;

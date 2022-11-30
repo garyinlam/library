@@ -6,4 +6,8 @@
   "id" : 1,
   "name" : "non",
   "admin" : false
+}, {
+  "id" : 2,
+  "name" : "Admin",
+  "admin" : true
 } ]

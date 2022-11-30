@@ -87,6 +87,12 @@ public class Library {
                 case "return":
                     returnBook();
                     break;
+                case "search":
+                    search();
+                    break;
+                case "author":
+                    searchAuthor();
+                    break;
                 default:
                     Output.error("unknown command");
             }
@@ -190,6 +196,7 @@ public class Library {
 
     private void help(){
         System.out.println("Available commands:");
+        System.out.println("author - search books by author");
         System.out.println("books - show currently available books");
         System.out.println("create - create a new user");
         System.out.println("help - show commands");
@@ -200,7 +207,7 @@ public class Library {
         System.out.println("quit - quit application");
         System.out.println("report - create report for all books (must be admin)");
         System.out.println("return - return a book using the book id");
-
+        System.out.println("search - search books by title");
     }
 
     private void loan(){
@@ -248,6 +255,32 @@ public class Library {
             }
         } else {
             Output.error("book not found");
+        }
+    }
+
+    private void search(){
+        System.out.println("Search for a book:");
+        String search = Input.getInput().toLowerCase();
+        List<Book> found = books
+                .stream()
+                .filter(book -> book.getTitle().toLowerCase().contains(search))
+                .collect(Collectors.toList());
+        System.out.println("Found "+found.size()+" results");
+        for (Book b: found) {
+            System.out.println(b);
+        }
+    }
+
+    private void searchAuthor(){
+        System.out.println("Search for an author:");
+        String search = Input.getInput().toLowerCase();
+        List<Book> found = books
+                .stream()
+                .filter(book -> book.getAuthor().toLowerCase().contains(search))
+                .collect(Collectors.toList());
+        System.out.println("Found "+found.size()+" results");
+        for (Book b: found) {
+            System.out.println(b);
         }
     }
 }
